@@ -813,7 +813,9 @@ export class GettingStartedPage extends EditorPane {
 
 		const header = $('.header', {},
 			$('h1.product-name.caption', {}, this.productService.nameLong),
-			$('p.subtitle.description', {}, localize({ key: 'gettingStarted.editingEvolved', comment: ['Shown as subtitle on the Welcome page.'] }, "Editing evolved"))
+			$('p.subtitle.description', {}, localize({ key: 'gettingStarted.tagLine', comment: ['Shown as subtitle on the Welcome page.'] }, "Reverse Engineering Retro Games Made Easier")),
+			$('p', {}, localize({ key: 'gettingStarted.welcomeHelpText', comment: ['Shown as paragraph on the Welcome page.'] }, "Welcome to the Reversing Emulator, first create or open a blank folder where the project files will be created.")),
+			$('p', {}, localize({ key: 'gettingStarted.welcomeHelpText2', comment: ['Shown as paragraph on the Welcome page.'] }, "When you have a folder you will be able to add the ROM file(s) you wish to reverse to the project."))
 		);
 
 		const leftColumn = $('.categories-column.categories-column-left', {},);
@@ -992,9 +994,9 @@ export class GettingStartedPage extends EditorPane {
 				klass: 'recently-opened',
 				limit: 5,
 				empty: $('.empty-recent', {},
-					localize('noRecents', "You have no recent folders,"),
+					localize('noRecents', "You have no recent reversing projects,"),
 					$('button.button-link', { 'x-dispatch': 'openFolder' }, localize('openFolder', "open a folder")),
-					localize('toStart', "to start.")),
+					localize('toStart', "to start adding ROM files.")),
 
 				more: $('.more', {},
 					$('button.button-link',

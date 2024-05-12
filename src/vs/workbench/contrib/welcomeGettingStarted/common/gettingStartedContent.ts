@@ -54,20 +54,20 @@ type GettingStartedWalkthroughContent = BuiltinGettingStartedCategory[];
 type GettingStartedStartEntryContent = BuiltinGettingStartedStartEntry[];
 
 export const startEntries: GettingStartedStartEntryContent = [
-	{
-		id: 'welcome.showNewFileEntries',
-		title: localize('gettingStarted.newFile.title', "New File..."),
-		description: localize('gettingStarted.newFile.description', "Open a new untitled text file, notebook, or custom editor."),
-		icon: Codicon.newFile,
-		content: {
-			type: 'startEntry',
-			command: 'command:welcome.showNewFileEntries',
-		}
-	},
+	// {
+	// 	id: 'welcome.showNewFileEntries',
+	// 	title: localize('gettingStarted.newFile.title', "New File..."),
+	// 	description: localize('gettingStarted.newFile.description', "Open a new untitled text file, notebook, or custom editor."),
+	// 	icon: Codicon.newFile,
+	// 	content: {
+	// 		type: 'startEntry',
+	// 		command: 'command:welcome.showNewFileEntries',
+	// 	}
+	// },
 	{
 		id: 'topLevelOpenMac',
-		title: localize('gettingStarted.openMac.title', "Open..."),
-		description: localize('gettingStarted.openMac.description', "Open a file or folder to start working"),
+		title: localize('gettingStarted.openMac.title', "Open a folder to start working..."),
+		description: localize('gettingStarted.openMac.description', "Open a folder to start your reversing journey"),
 		icon: Codicon.folderOpened,
 		when: '!isWeb && isMac',
 		content: {
@@ -75,17 +75,17 @@ export const startEntries: GettingStartedStartEntryContent = [
 			command: 'command:workbench.action.files.openFileFolder',
 		}
 	},
-	{
-		id: 'topLevelOpenFile',
-		title: localize('gettingStarted.openFile.title', "Open File..."),
-		description: localize('gettingStarted.openFile.description', "Open a file to start working"),
-		icon: Codicon.goToFile,
-		when: 'isWeb || !isMac',
-		content: {
-			type: 'startEntry',
-			command: 'command:workbench.action.files.openFile',
-		}
-	},
+	// {
+	// 	id: 'topLevelOpenFile',
+	// 	title: localize('gettingStarted.openFile.title', "Open File..."),
+	// 	description: localize('gettingStarted.openFile.description', "Open a file to start working"),
+	// 	icon: Codicon.goToFile,
+	// 	when: 'isWeb || !isMac',
+	// 	content: {
+	// 		type: 'startEntry',
+	// 		command: 'command:workbench.action.files.openFile',
+	// 	}
+	// },
 	{
 		id: 'topLevelOpenFolder',
 		title: localize('gettingStarted.openFolder.title', "Open Folder..."),
@@ -140,29 +140,29 @@ export const startEntries: GettingStartedStartEntryContent = [
 			type: 'startEntry',
 			command: 'command:welcome.showAllWalkthroughs',
 		}
-	},
-	{
-		id: 'topLevelRemoteOpen',
-		title: localize('gettingStarted.topLevelRemoteOpen.title', "Connect to..."),
-		description: localize('gettingStarted.topLevelRemoteOpen.description', "Connect to remote development workspaces."),
-		when: '!isWeb',
-		icon: Codicon.remote,
-		content: {
-			type: 'startEntry',
-			command: 'command:workbench.action.remote.showMenu',
-		}
-	},
-	{
-		id: 'topLevelOpenTunnel',
-		title: localize('gettingStarted.topLevelOpenTunnel.title', "Open Tunnel..."),
-		description: localize('gettingStarted.topLevelOpenTunnel.description', "Connect to a remote machine through a Tunnel"),
-		when: 'isWeb && showRemoteStartEntryInWeb',
-		icon: Codicon.remote,
-		content: {
-			type: 'startEntry',
-			command: 'command:workbench.action.remote.showWebStartEntryActions',
-		}
-	},
+	}
+	// {
+	// 	id: 'topLevelRemoteOpen',
+	// 	title: localize('gettingStarted.topLevelRemoteOpen.title', "Connect to..."),
+	// 	description: localize('gettingStarted.topLevelRemoteOpen.description', "Connect to remote development workspaces."),
+	// 	when: '!isWeb',
+	// 	icon: Codicon.remote,
+	// 	content: {
+	// 		type: 'startEntry',
+	// 		command: 'command:workbench.action.remote.showMenu',
+	// 	}
+	// },
+	// {
+	// 	id: 'topLevelOpenTunnel',
+	// 	title: localize('gettingStarted.topLevelOpenTunnel.title', "Open Tunnel..."),
+	// 	description: localize('gettingStarted.topLevelOpenTunnel.description', "Connect to a remote machine through a Tunnel"),
+	// 	when: 'isWeb && showRemoteStartEntryInWeb',
+	// 	icon: Codicon.remote,
+	// 	content: {
+	// 		type: 'startEntry',
+	// 		command: 'command:workbench.action.remote.showWebStartEntryActions',
+	// 	}
+	// }
 ];
 
 const Button = (title: string, href: string) => `[${title}](${href})`;
@@ -170,7 +170,7 @@ const Button = (title: string, href: string) => `[${title}](${href})`;
 export const walkthroughs: GettingStartedWalkthroughContent = [
 	{
 		id: 'Setup',
-		title: localize('gettingStarted.setup.title', "Get Started with VS Code"),
+		title: localize('gettingStarted.setup.title', "Get Started with Reversing Emulator"),
 		description: localize('gettingStarted.setup.description', "Customize your editor, learn the basics, and start coding"),
 		isFeatured: true,
 		icon: setupIcon,
@@ -270,7 +270,7 @@ export const walkthroughs: GettingStartedWalkthroughContent = [
 
 	{
 		id: 'SetupWeb',
-		title: localize('gettingStarted.setupWeb.title', "Get Started with VS Code for the Web"),
+		title: localize('gettingStarted.setupWeb.title', "Get Started with Reversing Emulator for the Web"),
 		description: localize('gettingStarted.setupWeb.description', "Customize your editor, learn the basics, and start coding"),
 		isFeatured: true,
 		icon: setupIcon,

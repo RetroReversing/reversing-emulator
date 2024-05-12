@@ -30,8 +30,8 @@ else if (globalThis._VSCODE_PRODUCT_JSON && globalThis._VSCODE_PACKAGE_JSON) {
 	// Running out of sources
 	if (env['VSCODE_DEV']) {
 		Object.assign(product, {
-			nameShort: `${product.nameShort} Dev`,
-			nameLong: `${product.nameLong} Dev`,
+			nameShort: `Reversing Emulator Dev`,
+			nameLong: `Reversing Emulator Dev`,
 			dataFolderName: `${product.dataFolderName}-dev`,
 			serverDataFolderName: product.serverDataFolderName ? `${product.serverDataFolderName}-dev` : undefined
 		});
@@ -58,16 +58,16 @@ else {
 	// Running out of sources
 	if (Object.keys(product).length === 0) {
 		Object.assign(product, {
-			version: '1.90.0-dev',
-			nameShort: 'Code - OSS Dev',
-			nameLong: 'Code - OSS Dev',
-			applicationName: 'code-oss',
-			dataFolderName: '.vscode-oss',
+			version: '0.1',
+			nameShort: 'Reversing Emulator',
+			nameLong: 'Reversing Emulator',
+			applicationName: 'reversing-emulator',
+			dataFolderName: '.reversing-emulator',
 			urlProtocol: 'code-oss',
-			reportIssueUrl: 'https://github.com/microsoft/vscode/issues/new',
+			reportIssueUrl: 'https://github.com/RetroReversing/reversing-emulator/issues/new',
 			licenseName: 'MIT',
-			licenseUrl: 'https://github.com/microsoft/vscode/blob/main/LICENSE.txt',
-			serverLicenseUrl: 'https://github.com/microsoft/vscode/blob/main/LICENSE.txt'
+			licenseUrl: 'https://github.com/RetroReversing/reversing-emulator/blob/main/LICENSE.txt',
+			serverLicenseUrl: 'https://github.com/RetroReversing/reversing-emulator/blob/main/LICENSE.txt'
 		});
 	}
 }
